@@ -1,0 +1,62 @@
+.viewContainer ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.liMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.liMenu svg{
+    stroke: var(--body);
+}
+.viewContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+}
+.viewContainer p{
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--label);
+}
+.viewContainer p svg{
+    stroke:var(--label);
+}
+.viewMenu{
+    margin: 0.6rem 3rem 0.6rem 1rem;
+}
+.viewFooter>p{
+    margin-left: 1rem;
+}
+.socialContainer{
+    width: 50vw;
+    max-width: 120px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem auto;
+    padding-top: 1rem;
+    border-top: thin solid var(--label);
+    position: relative;
+}
+.socialContainer::after{
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: thin solid var(--label);
+    transform: rotate(45deg);
+    top: -4px;
+    background-color: var(--ofWhite);
+}
+.socialContainer svg{
+    fill: var(--label);
+    stroke: var(--label);
+}

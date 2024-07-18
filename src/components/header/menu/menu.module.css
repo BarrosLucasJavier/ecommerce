@@ -1,0 +1,39 @@
+.menuContainer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--ofWhite);
+    /* padding: 0.6rem 3rem 0.6rem 1rem; */
+}
+.menuContainer>svg{
+    margin: 0.6rem 3rem 0.6rem 1rem;
+}
+ul,ol{
+    list-style: none;
+}
+.mainMenu{
+    display: flex;
+    gap: 3rem;
+    border-bottom: 1px solid var(--transparent);
+    position: relative;
+    margin: 0.6rem 3rem 0.6rem 1rem;
+}
+.mainMenu li{
+    padding: 0.8rem 0;
+}
+.activeLi{
+    border-bottom: 1px solid var(--secondary);
+    position: relative;
+}
+.activeLi::before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: var(--secondary);
+    position: absolute;
+    transform: rotate(45deg);
+    left: calc(50% - 3px);
+    bottom: -3px;
+}
