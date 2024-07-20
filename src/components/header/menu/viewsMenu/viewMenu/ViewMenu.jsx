@@ -1,30 +1,49 @@
 import { ViewFooter } from '../viewFooter/ViewFooter'
 import style from '../view.module.css'
 import PropTypes from 'prop-types'
+import { Down } from '../../../../icons/icons'
+import React, { useState } from 'react'
 
 export const ViewMenu = (props) => {
-  const viewList = props.props;
+  const viewList = props.props.submenus;
+  const [subMenu, setSubMenu] = useState(null);
+
+  const toggleSubMenu = (index) => {
+    setSubMenu((prevIndex) => (prevIndex === index ? null : index));
+  }
 
   return (
     <div className={style.viewContainer}>
       <div className={style.viewMenu}>
         <ul>
           {viewList.map((item, index) => (
-            <li
-              key={index}
-              className={style.liMenu}
-            >{item}
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.4447 8.48145L12.4815 15.4446L5.51836 8.48144" />
-              </svg>
-            </li>
+            <React.Fragment key={index}>
+              <li
+                className={style.liMenu}
+                onClick={() => toggleSubMenu(index)}
+              >{item.nombre}
+                {item.items.length > 0 && <Down/>}
+              </li>
+              {item.items.length > 0 && subMenu === index && (
+                <ul
+                  key={item.nombre}
+                  className={`${style.ulSubmenu} ${ style.block }`}
+                >
+                  {item.items.map((sub, subindex) => (
+                    <li key={subindex}>
+                      {sub}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </React.Fragment>
           ))}
         </ul>
       </div>
-      <ViewFooter/>
+      <ViewFooter />
     </div>
   )
 }
-ViewMenu.propTypes={
-  props: PropTypes.array.isRequired
+ViewMenu.propTypes = {
+  props: PropTypes.object.isRequired
 };
