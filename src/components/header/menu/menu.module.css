@@ -5,9 +5,9 @@
     min-height: 100vh;
     width: 100%;
     background-color: var(--ofWhite);
-    /* padding: 0.6rem 3rem 0.6rem 1rem; */
+    animation: menuOpenClose 1s ease;
 }
-.menuContainer>svg{
+.menuContainer>div>svg{
     margin: 0.6rem 3rem 0.6rem 1rem;
 }
 ul,ol{
@@ -36,4 +36,13 @@ ul,ol{
     transform: rotate(45deg);
     left: calc(50% - 3px);
     bottom: -3px;
+}
+
+@keyframes menuOpenClose {
+    0% {
+        transform: translate(-1000px);
+    }
+    100% {
+        transform: translate(0);
+    }
 }
