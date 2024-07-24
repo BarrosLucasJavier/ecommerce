@@ -1,19 +1,18 @@
-import { useState } from 'react'
 import logo from '../../assets/Logo.png'
 import { Bag, Bars, Glass } from '../icons/icons'
 import style from './header.module.css'
 import { Menu } from './menu/Menu'
+import useMenu from '../../hooks/useMenu'
 
 
 const Header = () => {
-    const [openMenu, setOpenMenu] = useState(false);
+    
+    const { openMenu, setOpenMenu} = useMenu();
 
-    const handleMenuOpen = (isOpen) => {
-        setOpenMenu(isOpen)
-    }
+
     return (
         <header className={style.headerContainer}>
-            <div onClick={() => handleMenuOpen(true)}>
+            <div onClick={() => setOpenMenu(true)}>
                 <Bars/>
             </div>
             <img src={logo} />
@@ -21,7 +20,7 @@ const Header = () => {
                 <Glass />
                 <Bag />
             </div>
-            {openMenu ? <Menu menuOpen={handleMenuOpen} /> : null}
+            {openMenu && <Menu/>}
         </header>
     )
 }

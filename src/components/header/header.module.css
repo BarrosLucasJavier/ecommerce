@@ -3,6 +3,10 @@
     justify-content: space-between;
     align-items: end;
     padding: 1rem 1rem 0.6rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 .headerContainer>div>svg{
     margin-right: 1rem;

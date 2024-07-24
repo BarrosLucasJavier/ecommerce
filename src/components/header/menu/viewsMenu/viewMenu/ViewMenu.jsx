@@ -1,7 +1,7 @@
 import { ViewFooter } from '../viewFooter/ViewFooter'
 import style from '../view.module.css'
 import PropTypes from 'prop-types'
-import { Down } from '../../../../icons/icons'
+import { Down, Up } from '../../../../icons/icons'
 import React, { useState } from 'react'
 
 export const ViewMenu = (props) => {
@@ -22,7 +22,7 @@ export const ViewMenu = (props) => {
                 className={style.liMenu}
                 onClick={() => toggleSubMenu(index)}
               >{item.nombre}
-                {item.items.length > 0 && <Down/>}
+                {item.items.length > 0 ? (subMenu === index ? <Up /> : <Down />) : null}
               </li>
               {item.items.length > 0 && subMenu === index && (
                 <ul

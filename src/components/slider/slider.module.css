@@ -1,0 +1,25 @@
+.bannerContainer{
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+.bannerContainer h1{
+    font-family: "Bodoni Moda", serif;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--body);
+    font-size: 38px;
+    position: absolute;
+    top: 38%;
+    left: 50px;
+    line-height: 1.1;
+}
+.spaceTitle{
+    width: 20px;
+    display: inline-block;
+}
+.andTitle{
+    font-size: 2rem;
+}

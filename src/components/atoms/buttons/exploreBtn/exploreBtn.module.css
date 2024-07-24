@@ -1,0 +1,12 @@
+.exploreBtn{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 253px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.40);
+    border:none;
+    border-radius: 30px;
+    color: var(--ofWhite);
+}

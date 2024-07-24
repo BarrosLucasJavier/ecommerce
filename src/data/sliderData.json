@@ -1,0 +1,19 @@
+{
+    "slider":[
+        {
+            "title": ["LUXURY", "FASHION", "ACCESSORIES"],
+            "imageUrl": "/src/assets/homeImages/homeBanner.png",
+            "buttonText":"EXPLORE COLLECTION"
+        },
+        {
+            "title": ["STYLE", "GUIDE", "TIPS"],
+            "imageUrl": "/src/assets/homeImages/blog.png",
+            "buttonText":"EXPLORE BLOG"
+        },
+        {
+            "title": ["WAREHOUSE", "SHOP", "DEPOT"],
+            "imageUrl": "/src/assets/homeImages/store.png",
+            "buttonText":"EXPLORE STORE"
+        }
+    ]
+}
