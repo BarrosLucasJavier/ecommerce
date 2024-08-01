@@ -25,3 +25,7 @@
 svg{
     stroke: var(--titleActive);
 }
+a{
+    color: var(--titleActive);
+    text-decoration: none;
+}
