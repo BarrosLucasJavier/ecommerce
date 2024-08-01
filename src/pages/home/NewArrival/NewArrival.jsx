@@ -2,6 +2,8 @@ import { useState } from "react"
 import useProducts from "../../../hooks/useProducts"
 import style from '../home.module.css'
 import { BodyArrival } from "./bodyArrival/BodyArrival"
+import { Link } from "react-router-dom"
+import { Right } from "../../../components/icons/icons"
 
 
 
@@ -34,7 +36,7 @@ export const NewArrival = () => {
     const latestFour = lastFourProducts();
 
     return (
-        <section>
+        <section className={style.arrivalContainer}>
             <div className={style.headerArrival}>
                 <h2>NEW ARRIVAL</h2>
                 <ul>
@@ -52,6 +54,7 @@ export const NewArrival = () => {
             <div className={style.bodyArrival}>
                 <BodyArrival item={latestFour} active={activeLi}/>
             </div>
+            <Link>Explore More <Right/></Link>
         </section>
     )
 }

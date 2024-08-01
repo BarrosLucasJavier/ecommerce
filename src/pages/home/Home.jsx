@@ -3,6 +3,7 @@ import { Slider } from '../../components/slider/Slider'
 import style from './home.module.css'
 import sliderData from '../../data/sliderData.json'
 import { NewArrival } from './NewArrival/NewArrival'
+import { Brands } from '../../components/brands/Brands'
 export const Home = () => {
 
   return (
@@ -11,6 +12,7 @@ export const Home = () => {
         <Slider slider={sliderData} />
       </section>
       <NewArrival/>
+      <Brands/>
     </div>
   )
 }

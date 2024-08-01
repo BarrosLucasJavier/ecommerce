@@ -12,11 +12,11 @@ export const Footer = () => {
                 <Youtube/>
             </div>
             <div className={style.infoContainer}>
-                <div className={style.lineDiv}></div>
+                <div className='lineDiv'></div>
                 <p>support@openui.design</p>
                 <p>+60 825 876</p>
                 <p>08:00 - 22:00 - Everyday</p>
-                <div className={style.lineDiv}></div>
+                <div className='lineDiv'></div>
             </div>
             <div className={style.navigationContainer}>
                 <Link>About</Link>

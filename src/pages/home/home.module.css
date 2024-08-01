@@ -1,6 +1,17 @@
 .homeContainer{
     background-color: #e7eaef;
 }
+/* Arrival */
+.arrivalContainer a{
+    display: flex;
+    gap: 0.7rem;
+    align-items: start;
+    justify-content: center;
+    margin: 1rem auto;
+}
+.arrivalContainer>a>svg{
+    width: 18px;
+}
 /* BODY ARRIVAL */
 .gridArrival{
     display: grid;

@@ -59,6 +59,12 @@ export const Up = () => (
         <path d="M5.51843 15.4448L12.4816 8.48165L19.4448 15.4448"/>
     </svg>
 );
+export const Right = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.2827 5L20.9998 12L14.2827 19"/>
+        <line x1="20.6279" y1="12.1089" x2="2.89487" y2="12.1089"/>
+    </svg>
+);
 export const Start = () => (
     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.75661 0.243408L8.51596 4.57849L13.1825 4.91211L9.6033 7.92497L10.7281 12.4662L6.75661 9.9932L2.78518 12.4662L3.90993 7.92497L0.330692 4.91211L4.99727 4.57849L6.75661 0.243408Z" fill="#DD8560" stroke="#DD8560"/>
