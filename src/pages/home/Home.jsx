@@ -4,6 +4,7 @@ import style from './home.module.css'
 import sliderData from '../../data/sliderData.json'
 import { NewArrival } from './NewArrival/NewArrival'
 import { Brands } from '../../components/brands/Brands'
+import { Collections } from './collections/Collections'
 export const Home = () => {
 
   return (
@@ -13,6 +14,7 @@ export const Home = () => {
       </section>
       <NewArrival/>
       <Brands/>
+      <Collections/>
     </div>
   )
 }
