@@ -5,6 +5,7 @@ import sliderData from '../../data/sliderData.json'
 import { NewArrival } from './NewArrival/NewArrival'
 import { Brands } from '../../components/brands/Brands'
 import { Collections } from './collections/Collections'
+import { ProductSlider } from '../../components/productSlider/ProductSlider'
 export const Home = () => {
 
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
       <NewArrival/>
       <Brands/>
       <Collections/>
+      <ProductSlider/>
     </div>
   )
 }

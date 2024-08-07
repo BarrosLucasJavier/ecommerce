@@ -1,0 +1,36 @@
+.productSliderContainer{
+    position: relative;
+    overflow: hidden;
+    margin: 5rem auto;
+}
+.productSliderContainer h3{
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight:lighter;
+}
+.productSliderContainer .lineDivisor{
+    margin: 0.7rem auto;
+}
+.sliderContainer{
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
+    scrollbar-width: none;
+}
+.sliderItem{
+    width: 255px;
+    flex: 0 0 75%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+.sliderItem img{
+    width: 100%;
+}
+.sliderItem p{
+    margin-top: 0.5rem;
+}
+.sliderPrice{
+    color: var(--primary);
+}

@@ -9,10 +9,8 @@ export const BodyArrival = ({ item, active }) => {
     if (active != 4) {
         activeItem = item[active];
     }
-
-    console.log(item);
     return (
-        <div className={ active === 4 ? style.gridArrival : style.itemActive}>
+        <div className={active === 4 ? style.gridArrival : style.itemActive}>
             {active === 4 ?
                 item.map((arrival, index) => (
                     <div key={index} className={style.gridItem}>
@@ -25,15 +23,15 @@ export const BodyArrival = ({ item, active }) => {
                 ))
                 : (
                     <>
-                        <img src={activeItem ? activeItem.images[0] : './src/assets/noImage.jpg'}/>
+                        <img src={activeItem ? activeItem.images[0] : './src/assets/noImage.jpg'} />
                         <div className={style.flexColumn}>
                             <h3>{activeItem.brand} {activeItem.category}</h3>
                             <p>{activeItem.description}</p>
                             <div className={style.flexRow}>
                                 <h4>$ {activeItem.price}</h4>
                                 <span>
-                                <Start/>
-                                {activeItem.rating} Ratings</span>
+                                    <Start />
+                                    {activeItem.rating} Ratings</span>
                             </div>
                             <div className={style.sizeItem}>
                                 <p>Size</p>
