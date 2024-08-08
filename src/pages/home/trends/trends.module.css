@@ -1,0 +1,64 @@
+.trendContainer{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.trendContainer ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+.trendContainer li{
+    background-color:var(--inputBackground);
+    padding: 0.5rem 0.5rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+}
+.goalsContainer{
+    background-color: var(--inputBackground);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+                        'header header'
+                        'ship sustain'
+                        'unique fast'
+                        'footer footer'
+    ;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    padding-top: 1.5rem;
+    margin: 1rem 0;
+}
+.goalsContainer .header{
+    padding: 0 3rem;
+}
+.header{
+    grid-area: header;
+}
+.ship{
+    grid-area: ship;
+}
+.sustain{
+    grid-area: sustain;
+}
+.unique{
+    grid-area: unique;
+}
+.fast{
+    grid-area: fast;
+}
+.footer{
+    grid-area: footer;
+}
+.child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.7rem;
+}
