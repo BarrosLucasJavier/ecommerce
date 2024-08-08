@@ -33,7 +33,7 @@ a{
 .lineDiv{
     width: 120px;
     border-bottom: 1px solid var(--transparent);
-    margin: 1.5rem auto;
+    margin:auto;
     position: relative;
 }
 .lineDiv::after{

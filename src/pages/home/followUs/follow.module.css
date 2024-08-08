@@ -1,0 +1,36 @@
+.followContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.followContainer h3{
+    font-weight: lighter;
+    letter-spacing: 4px;
+}
+.usContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+.personContainer{
+    position: relative;
+}
+.personContainer span{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: var(--ofWhite);
+    z-index: 2;
+}
+.personContainer>div{
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}

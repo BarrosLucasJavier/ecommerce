@@ -7,6 +7,7 @@ import { Brands } from './brands/Brands'
 import { Collections } from './collections/Collections'
 import { ProductSlider } from './productSlider/ProductSlider'
 import { Trends } from './trends/Trends'
+import { FollowUs } from './followUs/FollowUs'
 export const Home = () => {
 
   const trending = ["2024","spring","collection","fall","dress","autumncollection","openfashion"];
@@ -21,6 +22,7 @@ export const Home = () => {
       <Collections/>
       <ProductSlider/>
       <Trends trendList={trending}/>
+      <FollowUs/>
     </div>
   )
 }

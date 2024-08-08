@@ -14,6 +14,9 @@
     text-align: center;
     position: relative;
 }
+.infoContainer>div{
+    margin: 2rem auto;
+}
 .infoContainer>p{
     margin-bottom: 0.8rem;
 }

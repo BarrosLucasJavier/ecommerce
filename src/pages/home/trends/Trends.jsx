@@ -16,6 +16,7 @@ export const Trends = ({trendList}) => {
                 <div className={style.header + ` ${style.child}`}>
                     <img src='./src/assets/Logo.png'/>
                     <p>Making a luxurious lifestyle accessible for a generous group of women is our daily drive.</p>
+                    <div className='lineDiv'></div>
                 </div>
                 <div className={style.ship + ` ${style.child}`}>
                     <img src='./src/assets/homeImages/goals/geometrics.png'/>
