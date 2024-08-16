@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: end;
     padding: 1rem 1rem 0.6rem;
-    background-color: #e6e9ee;
+    background-color: var(--ofWhite);
     position: relative;
     z-index: 100;
 }

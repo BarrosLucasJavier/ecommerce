@@ -13,7 +13,7 @@ export const Home = () => {
   const trending = ["2024","spring","collection","fall","dress","autumncollection","openfashion"];
 
   return (
-    <div >
+    <main>
       <section className={style.homeContainer}>
         <Slider slider={sliderData} />
       </section>
@@ -23,6 +23,6 @@ export const Home = () => {
       <ProductSlider/>
       <Trends trendList={trending}/>
       <FollowUs/>
-    </div>
+    </main>
   )
 }

@@ -4,6 +4,7 @@ import MainLayout from './layouts/MainLayout'
 import { Home } from './pages/home/Home'
 import { MenuProvider } from './context/MenuProvider'
 import { ProductsProvider } from './context/ProductsProvider'
+import { Products } from './pages/products/Products'
 
 function App() {
   
@@ -15,6 +16,8 @@ function App() {
           <Routes>
             <Route path='/' element={<MainLayout/>}>
               <Route index element={<Home/>}/>
+              <Route path='/products' element={<Products/>}>
+            </Route>
             </Route>
           </Routes>
         </Router>

@@ -7,21 +7,25 @@ const ProductsContext = createContext();
 const ProductsProvider = ({ children }) => {
 
     const [products, setProducts] = useState(null);
+    const [totalPages, setTotalPages] = useState(0);
+    const [pageProducts, setPageProducts] = useState(1);
     const [latestProducts, setLatestProducts] = useState(null);
     const [randomProducts, setRandomProducts] = useState([]);
 
-    const productsLoad = async () => {
+    const productsLoad = async (limit = 10, page = pageProducts, order = 'DES', sortBy = 'release_date', search = '') => {
         try {
-            const url = 'https://api-cru-dproducts.vercel.app/api/v1/products';
+            const url = `https://api-cru-dproducts.vercel.app/api/v1/products?limit=${limit}&page=${page}&order=${order}&sortBy=${sortBy}&search=${search}`;
             const data = await axios.get(url);
             setProducts(data.data.data);
+            setTotalPages(data.data.totalPages);
+            
         } catch (error) {
             console.log(error);
         }
     }
     const latest = async () => {
         try {
-            const url = 'https://api-cru-dproducts.vercel.app/api/v1/products/latest';
+            const url = 'https://api-cru-dproducts.vercel.app/api/v1/products?order=DES&limit=4';
             const data = await axios.get(url);
             setLatestProducts(data.data.data);
         } catch (error) {
@@ -42,8 +46,8 @@ const ProductsProvider = ({ children }) => {
             if (!usedIndex.has(randomIndex)) {
                 usedIndex.add(randomIndex)
                 randomProductsArray.push(products[randomIndex])
+                maxIndexs--;
             }
-            maxIndexs--;
         } while (maxIndexs > 0);
         setRandomProducts(randomProductsArray);
     }
@@ -51,16 +55,18 @@ const ProductsProvider = ({ children }) => {
     useEffect(() => {
         productsLoad();
         latest();
-    }, []);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pageProducts]);
 
     useEffect(() => {
         if (products) {
             randomProductsFunction();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [products]);
 
     return (
-        <ProductsContext.Provider value={{ products, latestProducts, randomProducts }}>
+        <ProductsContext.Provider value={{ products, latestProducts, randomProducts, setPageProducts, totalPages, pageProducts }}>
             {children}
         </ProductsContext.Provider>
     )

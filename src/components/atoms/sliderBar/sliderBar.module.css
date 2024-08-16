@@ -1,0 +1,25 @@
+
+.sliderBarContainer{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: auto;
+}
+
+.btnMove{
+    background-color: transparent;
+    border: none;
+}
+.btnMove:disabled svg{
+    stroke: var(--placeholder);
+}
+.sliderBarContainer>.pageContainer>button{
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+    border: none;
+}
+.active{
+    background-color: var(--body);
+    color: var(--ofWhite);
+}

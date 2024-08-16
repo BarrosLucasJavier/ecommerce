@@ -49,3 +49,10 @@ a{
     z-index: 2;
     background-color: var(--ofWhite);
 }
+/* Root */
+#root{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 66px auto 335px;
+    min-height: 100dvh;
+}
