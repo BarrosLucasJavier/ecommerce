@@ -1,0 +1,56 @@
+.cardContainer{
+    height: 135px;
+    display: flex;
+    margin: 1rem 0;
+}
+.cardContainer img{
+    height: 100%;
+}
+.cardText{
+    width: 100%;
+    padding: 0.7rem 0 0 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardText h5{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.cardRating{
+    font-size: 12px;
+    margin-bottom: 0.3rem;
+}
+.cardSizeContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.cardSize{
+    font-size: 12px;
+}
+.cardSize span{
+    display: inline-block;
+    margin-left: 0.4rem;
+    font-size: 10px;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid var(--transparent);
+}
+.cardText svg{
+    stroke: var(--primary);
+    width: 16px;
+}
+.cardName{
+    color: var(--label);
+    margin-bottom: 0.1rem;
+}
+.cardPrice{
+    color: var(--secondary);
+    margin-bottom: 0.3rem;
+}

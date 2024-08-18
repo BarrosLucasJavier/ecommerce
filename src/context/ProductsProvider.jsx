@@ -11,14 +11,16 @@ const ProductsProvider = ({ children }) => {
     const [pageProducts, setPageProducts] = useState(1);
     const [latestProducts, setLatestProducts] = useState(null);
     const [randomProducts, setRandomProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const productsLoad = async (limit = 10, page = pageProducts, order = 'DES', sortBy = 'release_date', search = '') => {
         try {
+            setLoading(true)
             const url = `https://api-cru-dproducts.vercel.app/api/v1/products?limit=${limit}&page=${page}&order=${order}&sortBy=${sortBy}&search=${search}`;
             const data = await axios.get(url);
             setProducts(data.data.data);
             setTotalPages(data.data.totalPages);
-            
+            setLoading(false)
         } catch (error) {
             console.log(error);
         }
@@ -66,7 +68,16 @@ const ProductsProvider = ({ children }) => {
     }, [products]);
 
     return (
-        <ProductsContext.Provider value={{ products, latestProducts, randomProducts, setPageProducts, totalPages, pageProducts }}>
+        <ProductsContext.Provider value={{ 
+            products,
+            latestProducts,
+            randomProducts,
+            setPageProducts, 
+            totalPages, 
+            pageProducts,
+            loading,
+            setLoading
+            }}>
             {children}
         </ProductsContext.Provider>
     )

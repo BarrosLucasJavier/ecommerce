@@ -49,6 +49,22 @@ a{
     z-index: 2;
     background-color: var(--ofWhite);
 }
+/* LOADING */
+.loading{
+    width: 150px;
+    height: 12px;
+    background: linear-gradient(90deg, rgba(255, 253, 253, 0.4) 0%, rgba(156, 156, 156, 0.4) 49%, rgba(255,255,255,0.4) 100%);
+    animation: moveGradient 3s linear infinite;
+    border-radius: 15px;
+}
+@keyframes moveGradient {
+    0% {
+        background-position: -800px 0;
+    }
+    100% {
+        background-position: 0 800px;
+    }
+}
 /* Root */
 #root{
     display: grid;
