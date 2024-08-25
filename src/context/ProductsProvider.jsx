@@ -12,11 +12,16 @@ const ProductsProvider = ({ children }) => {
     const [latestProducts, setLatestProducts] = useState(null);
     const [randomProducts, setRandomProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [category, setCategory] = useState('');
+    const [categories, setCategories] = useState({
+        data: '',
+        amount: 0
+    });
 
     const productsLoad = async (limit = 10, page = pageProducts, order = 'DES', sortBy = 'release_date', search = '') => {
         try {
             setLoading(true)
-            const url = `https://api-cru-dproducts.vercel.app/api/v1/products?limit=${limit}&page=${page}&order=${order}&sortBy=${sortBy}&search=${search}`;
+            const url = `https://api-cru-dproducts.vercel.app/api/v1/products?limit=${limit}&page=${page}&order=${order}&category=${category}&sortBy=${sortBy}&search=${search}`;
             const data = await axios.get(url);
             setProducts(data.data.data);
             setTotalPages(data.data.totalPages);
@@ -53,31 +58,49 @@ const ProductsProvider = ({ children }) => {
         } while (maxIndexs > 0);
         setRandomProducts(randomProductsArray);
     }
+    const allCategories = async () => {
+        try {
+            const url = "https://api-cru-dproducts.vercel.app/api/v1/products/categories"
+            const categoriesData = await axios.get(url);
+
+            setCategories({
+                data: categoriesData.data.data,
+                amount: categoriesData.data.amount,
+            })
+
+        } catch (error) {
+            console.log(error);
+
+        }
+    }
 
     useEffect(() => {
-        productsLoad();
         latest();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [pageProducts]);
-
-    useEffect(() => {
+        allCategories();
         if (products) {
             randomProductsFunction();
         }
+    }, []);
+
+    useEffect(() => {
+        productsLoad();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [products]);
+    }, [pageProducts, category]);
 
     return (
-        <ProductsContext.Provider value={{ 
+        <ProductsContext.Provider value={{
             products,
             latestProducts,
             randomProducts,
-            setPageProducts, 
-            totalPages, 
+            setPageProducts,
+            totalPages,
             pageProducts,
             loading,
-            setLoading
-            }}>
+            setLoading,
+            setCategory,
+            category,
+            categories
+        }}>
             {children}
         </ProductsContext.Provider>
     )
