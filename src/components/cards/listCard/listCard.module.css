@@ -1,37 +1,37 @@
-.cardContainer{
+.cardContainer.detail{
     height: 135px;
     display: flex;
     margin: 1rem 0;
 }
-.cardContainer img{
+.cardContainer.detail img{
     height: 100%;
 }
-.cardText{
+.cardContainer.detail .cardText{
     width: 100%;
     padding: 0.7rem 0 0 0.7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.cardText h5{
+.cardContainer.detail .cardText>h5{
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-.cardRating{
+.cardContainer.detail .cardRating{
     font-size: 12px;
     margin-bottom: 0.3rem;
 }
-.cardSizeContainer{
+.cardContainer.detail .cardSizeContainer{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.cardSize{
+.cardContainer.detail .cardSize{
     font-size: 12px;
 }
-.cardSize span{
+.cardContainer.detail .cardSize>span{
     display: inline-block;
     margin-left: 0.4rem;
     font-size: 10px;
@@ -42,15 +42,104 @@
     line-height: 28px;
     border: 1px solid var(--transparent);
 }
-.cardText svg{
+.cardContainer.detail .cardText svg{
     stroke: var(--primary);
     width: 16px;
 }
-.cardName{
+.cardContainer.detail .cardName{
     color: var(--label);
     margin-bottom: 0.1rem;
 }
-.cardPrice{
+.cardContainer.detail .cardPrice{
     color: var(--secondary);
     margin-bottom: 0.3rem;
+}
+/* View Full */
+.cardContainer.full{
+    height: 511px;
+    width: 343px;
+    margin: 1rem 0;
+}
+.cardContainer.full>img{
+    width: 100%;
+    height: 457px;
+    object-fit: cover;
+}
+.cardContainer.full .cardRating{
+    display: none;
+}
+.cardContainer.full .cardSize{
+    display: none;
+}
+.cardContainer.full .cardText>h5{
+    margin-top: 0.4rem;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.cardContainer.full .cardText>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardContainer.full .cardPrice{
+    color: var(--primary);
+}
+.cardContainer.full .cardName{
+    color: var(--label);
+    font-size: 0.9rem;
+}
+.cardContainer.full .cardSizeContainer{
+    position: relative;
+}
+.cardContainer.full .cardSizeContainer>svg{
+    stroke: var(--secondary);
+    position: absolute;
+    right: 10px;
+    bottom: 70px;
+    width: 16px;
+    height: 16px;
+}
+/* View Grid */
+.cardContainer.grid{
+    width: 165px;
+    height: 285px;
+}
+.cardContainer.grid .cardSize{
+    display: none;
+}
+.cardContainer.grid .cardRating{
+    display: none;
+}
+.cardContainer.grid .cardText{
+    padding: 0.4rem;
+}
+.cardContainer.grid .cardSizeContainer{
+    position: relative;
+}
+.cardContainer.grid .cardSizeContainer>svg{
+    position: absolute;
+    stroke: var(--primary);
+    width: 16px;
+    height: 16px;
+    bottom: 70px;
+    right: 7px;
+}
+.cardContainer.grid>img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.cardContainer.grid .cardText>h5{
+    font-weight: lighter;
+    font-size: 0.9rem;
+}
+.cardContainer.grid .cardName{
+    color: var(--label);
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+.cardContainer.grid .cardPrice{
+    color: var(--secondary);
 }

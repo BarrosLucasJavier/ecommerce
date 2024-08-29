@@ -1,15 +1,15 @@
-export const Down = () =>(
+export const Down = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.4447 8.48145L12.4815 15.4446L5.51836 8.48144" />
     </svg>
 );
-export const X = ()=>(
+export const X = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 6L18.7742 18.7742" strokeLinejoin="round"/>
-        <path d="M6 18.7744L18.7742 6.00022" strokeLinejoin="round"/>
+        <path d="M6 6L18.7742 18.7742" strokeLinejoin="round" />
+        <path d="M6 18.7744L18.7742 6.00022" strokeLinejoin="round" />
     </svg>
 );
-export const Call = ()=>(
+export const Call = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M15.9719 1.82835L22.3359 2.53546C22.3359 2.53546 23.043 8.89942 15.9719 15.9705C8.90087 23.0416 2.53553 22.3358 2.53553 22.3358L1.82843 15.9719L6.77955 13.1434L9.25374 15.6176C9.25374 15.6176 11.0215 15.2641 13.1428 13.1427C15.2641 11.0214 15.6177 9.25366 15.6177 9.25366L13.1435 6.77948L15.9719 1.82835Z" />
     </svg>
@@ -36,7 +36,7 @@ export const Youtube = () => (
     </svg>
 );
 export const Bars = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.306763 12H15.9824" />
         <path d="M0.306641 5H23.6931" />
         <path d="M0.306641 19H23.6931" />
@@ -44,46 +44,74 @@ export const Bars = () => (
 );
 export const Glass = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z"/>
-        <path d="M22 21.9999L18.7823 18.7822"/>
+        <path d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z" />
+        <path d="M22 21.9999L18.7823 18.7822" />
     </svg>
 );
 export const Bag = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.49594 23.28L4.31166 6.7207H20.659L21.4747 23.28H3.49594Z"/>
-        <path d="M8.1604 10.1491L8.1604 5.55139C8.1604 4.40438 8.61605 3.30434 9.42711 2.49328C10.2382 1.68221 11.3382 1.22656 12.4852 1.22656C13.6322 1.22656 14.7323 1.68221 15.5433 2.49328C16.3544 3.30434 16.8101 4.40438 16.8101 5.55139V10.1491"/>
+        <path d="M3.49594 23.28L4.31166 6.7207H20.659L21.4747 23.28H3.49594Z" />
+        <path d="M8.1604 10.1491L8.1604 5.55139C8.1604 4.40438 8.61605 3.30434 9.42711 2.49328C10.2382 1.68221 11.3382 1.22656 12.4852 1.22656C13.6322 1.22656 14.7323 1.68221 15.5433 2.49328C16.3544 3.30434 16.8101 4.40438 16.8101 5.55139V10.1491" />
     </svg>
 );
 export const Up = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.51843 15.4448L12.4816 8.48165L19.4448 15.4448"/>
+        <path d="M5.51843 15.4448L12.4816 8.48165L19.4448 15.4448" />
     </svg>
 );
 export const RightArrow = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M14.2827 5L20.9998 12L14.2827 19"/>
-        <line x1="20.6279" y1="12.1089" x2="2.89487" y2="12.1089"/>
+        <path d="M14.2827 5L20.9998 12L14.2827 19" />
+        <line x1="20.6279" y1="12.1089" x2="2.89487" y2="12.1089" />
     </svg>
 );
 export const Start = () => (
     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6.75661 0.243408L8.51596 4.57849L13.1825 4.91211L9.6033 7.92497L10.7281 12.4662L6.75661 9.9932L2.78518 12.4662L3.90993 7.92497L0.330692 4.91211L4.99727 4.57849L6.75661 0.243408Z" fill="#DD8560" stroke="#DD8560"/>
+        <path d="M6.75661 0.243408L8.51596 4.57849L13.1825 4.91211L9.6033 7.92497L10.7281 12.4662L6.75661 9.9932L2.78518 12.4662L3.90993 7.92497L0.330692 4.91211L4.99727 4.57849L6.75661 0.243408Z" fill="#DD8560" stroke="#DD8560" />
     </svg>
 );
 export const Right = () => (
     <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 1L7.96317 7.96317L1 14.9263"/>
+        <path d="M1 1L7.96317 7.96317L1 14.9263" />
     </svg>
-
 );
 export const Left = () => (
     <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7.96301 14.9263L0.99984 7.9631L7.96301 0.999928"/>
+        <path d="M7.96301 14.9263L0.99984 7.9631L7.96301 0.999928" />
     </svg>
 );
 export const Heart = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.77216 3.77216C0.40928 6.13503 0.409282 9.96602 2.77216 12.3289L11.937 21.4937L12 21.4307L12.0631 21.4938L21.2279 12.329C23.5908 9.96609 23.5908 6.13511 21.2279 3.77223C18.865 1.40936 15.034 1.40936 12.6712 3.77224L12.3536 4.08978C12.1584 4.28505 11.8418 4.28505 11.6465 4.08978L11.3289 3.77216C8.96601 1.40928 5.13503 1.40928 2.77216 3.77216Z"/>
+        <path d="M2.77216 3.77216C0.40928 6.13503 0.409282 9.96602 2.77216 12.3289L11.937 21.4937L12 21.4307L12.0631 21.4938L21.2279 12.329C23.5908 9.96609 23.5908 6.13511 21.2279 3.77223C18.865 1.40936 15.034 1.40936 12.6712 3.77224L12.3536 4.08978C12.1584 4.28505 11.8418 4.28505 11.6465 4.08978L11.3289 3.77216C8.96601 1.40928 5.13503 1.40928 2.77216 3.77216Z" />
+    </svg>
+);
+export const DetailView = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.2051 17H19.9768" />
+        <path d="M12.2283 7H20" />
+        <rect x="2.51318" y="3.45508" width="7" height="7" />
+        <rect x="2.51318" y="13.5142" width="7" height="7" />
+    </svg>
+);
+export const FullView = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.04492 18.0259H20.9553" />
+        <path d="M20.8018 17.5327L20.8018 21.3921" />
+        <path d="M3.30518 17.5327L3.30518 21.3921" />
+        <rect x="3.25" y="3.45508" width="17.5" height="10.7458" />
+    </svg>
+);
+export const GridView = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4.50024" y="4.5" width="6" height="6" />
+        <rect x="4.50024" y="13.5" width="6" height="6" />
+        <rect x="13.5002" y="4.5" width="6" height="6" />
+        <rect x="13.5002" y="13.5" width="6" height="6" />
+    </svg>
+);
+export const Triangle = () => (
+    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.71492 5.27472L0.235658 0.574577L7.19418 0.574577L3.71492 5.27472Z"/>
     </svg>
 
 );

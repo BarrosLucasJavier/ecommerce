@@ -1,0 +1,43 @@
+.optionBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.optionBarContainer select {
+    appearance: none;
+    border: none;
+    position: relative;
+    padding: 0.3rem;
+    border-radius: 25px;
+    background-color: var(--optionBack);
+    text-align: center;
+    width: 130px;
+}
+.optionBarContainer select:focus{
+    border: none;
+    outline: none;
+}
+.selectContainer{
+    position: relative;
+}
+.optionBarContainer>div>svg{
+    fill: var(--body);
+    stroke: var(--body);
+    width: 8px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.optionBarContainer .viewContainer div{
+    background-color: var(--optionBack);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
